@@ -34,6 +34,11 @@ st.subheader("2. Trực quan hóa dữ liệu")
 tab1, tab2, tab3 = st.tabs(["Sales Distribution", "Promotion Impact", "Product Category"])
 
 with tab1:
+    st.code("""
+     fig, ax = plt.subplots()
+    sns.histplot(df['Sales Volume'], kde=True, ax=ax)
+    st.pyplot(fig)
+    """,language="python")
     fig, ax = plt.subplots()
     sns.histplot(df['Sales Volume'], kde=True, ax=ax)
     st.pyplot(fig)
